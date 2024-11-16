@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic State and City Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .container {
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Select State and City</h2>
+  <label for="state">State:</label>
+  <select id="state" onchange="updateCities()">
+    <option value="">Select a state</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Rajasthan">Rajasthan</option>
+  </select>
+
+  <label for="city">City:</label>
+  <select id="city">
+    <option value="">Select a city</option>
+  </select>
+</div>
+
+<script>
+  const stateCityMap = {
+    "Gujarat": ["Surat", "Vadodra", "Ahemdabad"],
+    "Maharashtra": ["Mumbai", "Pune", "Nashik"],
+    "Rajasthan": ["Jaipur", "Udaipur", "Jaisalmer"]
+  };
+
+  function updateCities() {
+    const stateSelect = document.getElementById("state");
+    const citySelect = document.getElementById("city");
+    const selectedState = stateSelect.value;
+
+    // Clear the previous city options
+    citySelect.innerHTML = '<option value="">Select a city</option>';
+
+    if (stateCityMap[selectedState]) {
+      // Populate city dropdown with cities from the selected state
+      stateCityMap[selectedState].forEach(city => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

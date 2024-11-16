@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load More with Pagination</title>
+
+     <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-container {
+    width: 400px;
+    text-align: center;
+}
+
+.content-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-list li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.load-more-btn:hover {
+    background-color: #0056b3;
+}
+
+     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="content-container">
+        <ul id="content-list" class="content-list">
+        </ul>
+
+        <button id="load-more-btn" class="load-more-btn">Load More</button>
+    </div>
+
+    <script src="9.js"></script>
+</body>
+</html>

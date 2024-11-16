@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+
+    <style>     
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            margin: 0; 
+            padding: 0; 
+        } 
+        .container { 
+            max-width: 900px; 
+            margin: 50px auto; 
+            background-color: rgb(248, 157, 190); 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        } 
+        h1 { 
+            text-align: center; 
+            color: #333; 
+            margin-bottom: 20px; 
+        } 
+        .book-list { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+        } 
+        .book { 
+            background-color: #f4f4f4; 
+            padding: 15px; 
+            width: 200px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            text-align: center; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s; 
+        } 
+        .book:hover { 
+            transform: translateY(-5px); 
+        } 
+        .book-title { 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        } 
+        .book-author { 
+            color: #555; 
+            font-size: 14px; 
+            margin-bottom: 5px; 
+        } 
+        .book-year { 
+            color: #777; 
+            font-size: 12px; 
+        } 
+             </style> 
+</head>
+<body>
+    <div class="container">
+        <h1>Book List</h1>
+        <div id="book-list" class="book-list">
+        </div>
+    </div>
+
+    <script src="6.js"></script>
+</body>
+</html>
